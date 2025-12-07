@@ -1,0 +1,88 @@
+🔶 1. Shifted String Match (String Manipulation, HashMap)
+
+Given two strings A and B, return true if B can be formed by shifting characters of A to the right any number of times.
+
+Example:
+A = "abcde", B = "cdeab" → true
+
+{{Deutsche_Bank_String_Manipulation.java}}
+
+🔶 2. Smallest Sum ≥ Target with Two Numbers (Two Pointers)
+
+Given an array and integer T, find two numbers whose product is ≥ T but whose sum is minimum possible.
+
+Return that minimum sum.
+
+🔶 3. Scatter Palindrome Count (Popular in Banks)
+
+Given a string, count how many substrings can be rearranged to form a palindrome.
+
+🔶 4. Buy Candles Simulation (Stack Simulation)
+
+You get a stack of candles with different heights.
+You have queries: buy the topmost candle whose height ≥ X.
+When bought, the candle is removed.
+
+Return which candles you bought.
+
+🔶 5. Monster vs Heroes Power Match (Greedy / Sorting)
+
+You have monsters and heroes arrays.
+A hero can kill a monster if heroPower ≥ monsterPower.
+Find the minimum number of heroes required to defeat all monsters.
+
+🔶 6. Minimum UI Components (Greedy + Sorting)
+
+Given N rectangular UI boxes, minimize the number of rows needed so width per row ≤ W.
+
+🔶 7. Minimum Time to Finish Jobs (Binary Search on Answer)
+
+Given array of job times and K workers, find minimum time to finish all jobs if each worker must do consecutive jobs.
+
+🔶 8. Koko-style Banana Eating Problem (Binary Search)
+
+Classic: Find minimum integer X such that Koko finishes piles within H hours.
+
+🔶 9. Balanced Substring with Equal 0s and 1s (Prefix / HashMap)
+
+Given a binary string, return longest substring with equal 0s and 1s.
+
+🔶 10. Currency Exchange Rates (Graph + BFS)
+
+Given exchange rates as edges, find best conversion rate from currency A to B.
+
+🔶 11. Validate Credit Card (Simulation)
+
+Given a card number string, validate using Luhn Algorithm.
+
+🔶 12. Minimum Window of Unique Values (Sliding Window)
+
+Given an array, return minimum window size containing all distinct values in the array.
+
+🔶 13. Candidate Filter System (Map + Custom Sorting)
+
+Given list of candidates with name, score, experience, sort by:
+
+Highest score
+
+Highest experience
+
+Alphabetical
+
+Return final sorted list.
+
+🔶 14. Longest Increasing Difficulty Tasks (DP)
+
+Given task difficulty array, find length of LIS (Longest Increasing Subsequence).
+
+🔶 15. Online Bank Account (Simulation)
+
+Operations:
+
+"deposit X"
+
+"withdraw X"
+
+"charge X" (cannot go below 0)
+
+Return final account balance.
