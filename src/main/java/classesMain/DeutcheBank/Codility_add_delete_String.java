@@ -1,4 +1,4 @@
-package classesMain;
+package classesMain.DeutcheBank;
 
 public class Codility_add_delete_String {
 
