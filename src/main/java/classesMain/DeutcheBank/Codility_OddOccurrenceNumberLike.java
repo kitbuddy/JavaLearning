@@ -3,11 +3,11 @@ package classesMain.DeutcheBank;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OddOccurrenceNumberLikeCodility {
+public class Codility_OddOccurrenceNumberLike {
     public static void main(String[] args) {
         int[] A =  {9, 3, 9, 3, 9, 7, 9 };
 //        System.out.println(OddOccurrenceNumber.getSingleValueFastUsingMap(A));
-        System.out.println(OddOccurrenceNumberLikeCodility.getSingleValueFastUsingXOR(A));
+        System.out.println(Codility_OddOccurrenceNumberLike.getSingleValueFastUsingXOR(A));
     }
 
     private static int getSingleValueFastUsingXOR(int[] arr) {
