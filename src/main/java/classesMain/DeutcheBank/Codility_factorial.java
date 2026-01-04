@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.*;
 
-import static java.util.stream.Collectors.joining;
-
 public class Codility_factorial {
 
         /*
