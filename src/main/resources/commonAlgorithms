@@ -1,0 +1,21 @@
+Two pointer Algorithm : /Users/ankitjain/IdeaProjects/JavaLearning/src/main/java/classesMain/PracticeMakeTheManPerfect/TwoPointer.java
+
+Sliding Window: This is a variation of the two-pointer approach, often used on arrays or linked lists to perform an operation on a contiguous subarray/substring of a given size. It is useful for finding the longest substring without repeating characters, maximum subarray sum, etc.
+
+Fast and Slow Pointers (Hare & Tortoise): This is a specific two-pointer technique where the pointers move at different speeds. It is primarily used for:
+
+Detecting cycles in a linked list or array (Floyd's Cycle-Finding Algorithm).
+
+Finding the middle node of a linked list.
+
+Checking if a linked list is a palindrome.
+
+Binary Search: While a search algorithm, it shares a conceptual similarity with two pointers in that it efficiently narrows down the search space. It is applicable only to sorted data structures and repeatedly divides the search interval in half. Java's Arrays and Collections classes provide built-in methods for binary search.
+
+Dynamic Programming (DP): This approach solves complex problems by breaking them down into simpler, overlapping subproblems and storing the results to avoid redundant computations (memoization). It is a powerful way to optimize recursive solutions.
+
+Merge Intervals: This pattern is a valuable technique for handling problems involving overlapping time ranges or intervals. It often involves sorting the intervals first and then iterating through them to merge overlaps.
+
+Recursion/Backtracking: These are fundamental techniques for problems that can be broken down into smaller instances of the same problem. Backtracking, a form of recursion, is used for exploring all possible solutions to a problem, such as in permutation or combination problems.
+
+Sorting Algorithms: Although Java provides built-in sorting (e.g., Collections.sort(), Arrays.sort() which often uses Timsort), understanding algorithms like Merge Sort or Quick Sort is fundamental for problem-solving, as many problems require a sorted input to apply efficient techniques like two pointers or binary search.
