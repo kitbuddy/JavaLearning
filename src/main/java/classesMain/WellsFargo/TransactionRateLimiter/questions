@@ -1,0 +1,48 @@
+Question 1: Transaction Rate Limiter (Medium → Medium-Hard)
+Problem
+
+You are building a rate limiter for a banking API.
+
+Each client can make at most N transactions in any rolling T-second window.
+
+You are given:
+
+clientId
+
+timestamp (in seconds, increasing order)
+
+limit = N
+
+windowSize = T
+
+Return true if the transaction is allowed, false if it should be rejected.
+
+Constraints
+
+Up to 1 million transactions
+
+Must be efficient
+
+Example
+limit = 3, windowSize = 10
+
+(client1, 1)  -> true
+(client1, 2)  -> true
+(client1, 3)  -> true
+(client1, 11) -> true
+(client1, 12) -> true
+(client1, 13) -> true
+(client1, 14) -> false
+
+What they look for
+
+Deque per client
+
+Sliding window cleanup
+
+O(1) amortized per call
+
+Clean separation of logic
+
+
+------------------------------------------------------------

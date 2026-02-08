@@ -21,23 +21,20 @@ public class CountNonDivisible {
             int num = array[i];
             int divisorCountInArray = 0;
 
-            for(int d=1; d*d <= num; d++) {
-                if(num % d == 0) {
-                    if(freqMap.containsKey(d)) {
-                        divisorCountInArray += freqMap.get(d);
+            for(int j=1; j*j <= num; j++) {
+                if(num % j == 0) {
+                    if(freqMap.containsKey(j)) {
+                        divisorCountInArray += freqMap.get(j);
                     }
 
-                    if(d!=num/d && freqMap.containsKey(num/d)) {
-                        divisorCountInArray += freqMap.get(num /d);
+                    if(j !=num/j && freqMap.containsKey(num/j)) {
+                        divisorCountInArray += freqMap.get(num /j);
                     }
                 }
-
                 nonDivisors[i] = n - divisorCountInArray;
             }
         }
 
         return nonDivisors;
     }
-
-
 }

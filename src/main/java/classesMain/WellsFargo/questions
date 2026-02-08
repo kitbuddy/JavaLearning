@@ -1,0 +1,131 @@
+Question 1: Transaction Rate Limiter (Medium → Medium-Hard)
+Problem
+
+You are building a rate limiter for a banking API.
+
+Each client can make at most N transactions in any rolling T-second window.
+
+You are given:
+
+clientId
+
+timestamp (in seconds, increasing order)
+
+limit = N
+
+windowSize = T
+
+Return true if the transaction is allowed, false if it should be rejected.
+
+Constraints
+
+Up to 1 million transactions
+
+Must be efficient
+
+Example
+limit = 3, windowSize = 10
+
+(client1, 1)  -> true
+(client1, 2)  -> true
+(client1, 3)  -> true
+(client1, 11) -> true
+(client1, 12) -> true
+(client1, 13) -> true
+(client1, 14) -> false
+
+What they look for
+
+Deque per client
+
+Sliding window cleanup
+
+O(1) amortized per call
+
+Clean separation of logic
+
+
+------------------------------------------------------------
+Question 2: Log Aggregation by Service (Medium)
+Problem
+
+You are given application logs:
+
+class LogEntry {
+    String serviceName;
+    long timestamp;
+    int responseTime;
+}
+
+
+Write a method that returns the average response time per service for logs within the last K seconds.
+
+Input
+
+List<LogEntry> logs
+
+currentTime
+
+K
+
+Output
+Map<String, Double>  // service → average response time
+
+Constraints
+
+Logs are not sorted
+
+Large input size
+
+What they look for
+
+Efficient filtering
+
+Proper use of Map
+
+Avoid unnecessary sorting
+
+Handling empty results
+------------------------------------------------------------
+Question 3: LRU Cache Implementation (Medium-Hard)
+Problem
+
+Implement an LRU Cache with:
+
+get(key)
+
+put(key, value)
+
+Fixed capacity
+
+Requirements
+
+O(1) time for both operations
+
+Thread-safe version not required, but bonus points if considered
+
+What they look for
+
+HashMap + Doubly Linked List
+
+Clean class design
+
+Edge case handling
+
+How to approach these in the test
+
+Start with Question 1 or 2 (fast points)
+
+Keep code readable, not fancy
+
+Add small helper methods
+
+Mention time complexity if comments are allowed
+
+Lead-level checklist (before submitting)
+
+✔ Edge cases handled
+✔ No brute force
+✔ Clean variable names
+✔ Clear logic separation
+✔ Complexity is optimal

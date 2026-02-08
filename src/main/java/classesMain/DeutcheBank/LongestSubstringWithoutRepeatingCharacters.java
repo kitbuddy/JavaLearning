@@ -26,11 +26,15 @@ public class LongestSubstringWithoutRepeatingCharacters {
             }
 
             substring.add(str.charAt(right));
+            // if we want to find the substring then below block is necessary
+            // else to find the max uniqueCharacter string above substring.length
+            // should work
             if(right - left +1 > maxLength) {
                 maxLength = right - left +1;
                 start = left;
             }
         }
+
         System.out.println("String is : " + str.substring(start, start+maxLength));
         return str.substring(start, start+maxLength).length();
 

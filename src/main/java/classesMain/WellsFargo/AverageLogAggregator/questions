@@ -1,0 +1,40 @@
+Question 2: Log Aggregation by Service (Medium)
+Problem
+
+You are given application logs:
+
+class LogEntry {
+    String serviceName;
+    long timestamp;
+    int responseTime;
+}
+
+
+Write a method that returns the average response time per service for logs within the last K seconds.
+
+Input
+
+List<LogEntry> logs
+
+currentTime
+
+K
+
+Output
+Map<String, Double>  // service → average response time
+
+Constraints
+
+Logs are not sorted
+
+Large input size
+
+What they look for
+
+Efficient filtering
+
+Proper use of Map
+
+Avoid unnecessary sorting
+
+Handling empty results

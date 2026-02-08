@@ -9,10 +9,8 @@ public class Max_NonOverlapping_segments {
     }
 
     private static int getMaxNonOverlappingSet(int[] A, int[] B) {
-
         int count = 1;
         int lastEnd = B[0];
-
         for(int i = 1; i<A.length; i++) {
             if(A[i] > lastEnd) {
                 count++;

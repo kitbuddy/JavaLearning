@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class TwoPointer {
     public static void main(String[] args) {
         int[] arr = new int[]{1,2,4,3,5,2,4,2};
-        TwoPointer.understandTwoPointerBackwardsRestrictedEasy(arr);
+        TwoPointer.understandTwoPointerBackwardsOptimized(arr, 7);
     }
 
     private static void understandTwoPointerMovingTogether(int[] arr) {
@@ -94,4 +94,28 @@ public class TwoPointer {
         }
     }
 
+
+    // rewriting this :   understandTwoPointerBackwards(int[] arr) {
+    //    }
+
+
+    public static boolean understandTwoPointerBackwardsOptimized(int[] arr, int sumExpected) {
+        Arrays.sort(arr);
+        int n = arr.length;
+        int left = 0;
+        int right = n -1;
+            while (left < right) {
+                if(arr[left] + arr[right] == sumExpected ) {
+                    return true;
+                }
+                if (arr[left] + arr[right] < sumExpected) {
+                    left++;
+                } else  {
+                    right --;
+            }
+
+        }
+        System.out.println("No pair exists");
+            return false;
+    }
 }
