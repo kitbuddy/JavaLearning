@@ -9,10 +9,10 @@ public class practice2pointer {
         // find minimum substring with unique character
         String word = "letsStory"  ;
 
-        practice2pointer.getMinimumSubstringWithoutRepeatingCharacters(word);
+        System.out.println(practice2pointer.getMinimumSubstringWithoutRepeatingCharacters(word));
     }
 
-    private static void getMinimumSubstringWithoutRepeatingCharacters(String word) {
+    private static Integer getMinimumSubstringWithoutRepeatingCharacters(String word) {
 
         char[] charArray = word.toCharArray();
         Set<Character> set = new HashSet<>();
@@ -23,8 +23,9 @@ public class practice2pointer {
            } else {
                left++;
            }
-
+        }
+            return set.size();
 
         }
-    }
+
 }
