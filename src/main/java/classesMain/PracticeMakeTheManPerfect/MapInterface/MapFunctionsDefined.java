@@ -8,8 +8,29 @@ public class MapFunctionsDefined {
     public static void main(String[] args) {
         String[] stringArr = {"dog", "dog", "cat", "horse", "lion", "horse"};
 
-        MapFunctionsDefined.getMapforElements(stringArr);
+        MapFunctionsDefined.getAllKeysPrintedFromMap(stringArr);
     }
+
+    private static void getAllKeysPrintedFromMap(String[] stringArr) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String s : stringArr) {
+            map.put(s, map.getOrDefault(s, 0) +1);
+        }
+
+//        System.out.println(map);
+
+        System.out.println("All keys printed");
+        for(Map.Entry<String, Integer> entry: map.entrySet()) {
+            System.out.println(entry.getKey());
+        }
+
+        System.out.println("All Values Printed");
+        for (Map.Entry<String, Integer> entry: map.entrySet()) {
+            System.out.println(entry.getValue());
+        }
+    }
+
+
 
     private static void getMapforElements(String[] stringArr) {
         Map<String, Integer> map = new HashMap<>();

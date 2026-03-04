@@ -4,24 +4,34 @@ import java.util.*;
 
 public class Wayfair1_1 {
 
-    public static List<String> getUserAccessTimes(String[][] log) {
-        List<String> list = new ArrayList<>();
-        Map<Object, String[]> map = new HashMap<>();
+    public static Map<String, List<Integer>> getUserAccessTimes(String[][] logs1) {
+        List<Integer> list = new ArrayList<>();
+        Map<String, List<Integer>> map = new HashMap<>();
 
-        for (int i=0; i <  log.length ; i++) {
-//            System.out.println(Arrays.stream(log[i]).toList());
+        for (int i = 0; i < logs1.length; i++) {
+            String key = "";
+            for (int j = 0; j < 2; j++) {
+                list = new ArrayList<>();
 
+                key = logs1[i][1];
+                Integer minValue = Integer.MAX_VALUE;
+                Integer maxValue = Integer.MIN_VALUE;
+                if(logs1[i][1] == key) {
+                    String value = logs1[i][0];
+                    minValue = Math.min(minValue, Integer.valueOf(value));
+                    maxValue = Math.max(Integer.valueOf(value), maxValue);
+                }
 
-            for (int j=0; j < 3; j++) {
-//                System.out.println( log[i][j]);
-
-//                map.put(log[i], map.getOrDefault(j,  []));
+                list.add(minValue);
+                list.add(maxValue);
             }
-            i++;
+            map.put(key, list);
+
+            System.out.println(map);
         }
 
 
-        return list;
+        return map;
 
 
     }

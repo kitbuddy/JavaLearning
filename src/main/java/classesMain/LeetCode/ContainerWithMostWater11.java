@@ -22,14 +22,11 @@ public class ContainerWithMostWater11 {
         int max = 0;
         for (int i=0; i<height.length-1; i++) {
             for (int j=height.length-1; j>0; j--) {
-                System.out.println(height[i] * height[j]);
+//                System.out.println(height[i] * height[j]);
 //                myArea = Math.max(myArea,  height[i] * height[j]);
-                System.out.println("counter" + counter);
+//                System.out.println("counter" + counter);
                 int area = Math.min(height[i], height[j]) * (j-i);
                 myArea = Math.max(myArea, area);
-
-                counter++;
-                System.out.println(myArea);
             }
 
         }

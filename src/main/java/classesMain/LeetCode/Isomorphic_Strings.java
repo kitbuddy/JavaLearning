@@ -30,6 +30,6 @@ public class Isomorphic_Strings {
         return false;
     }
     public static void main(String[] args) {
-        Isomorphic_Strings.isIsomorphic("paper", "title");
+        System.out.println(Isomorphic_Strings.isIsomorphic("paper", "title"));
     }
 }
