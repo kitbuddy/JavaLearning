@@ -8,24 +8,24 @@ public class MapFunctionsDefined {
     public static void main(String[] args) {
         String[] stringArr = {"dog", "dog", "cat", "horse", "lion", "horse"};
 
-        MapFunctionsDefined.getAllKeysPrintedFromMap(stringArr);
+        MapFunctionsDefined.getMapforElements(stringArr);
     }
 
     private static void getAllKeysPrintedFromMap(String[] stringArr) {
-        Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> frequencyMap = new HashMap<>();
         for (String s : stringArr) {
-            map.put(s, map.getOrDefault(s, 0) +1);
+            frequencyMap.put(s, frequencyMap.getOrDefault(s, 0) +1);
         }
 
-//        System.out.println(map);
+//        System.out.println(frequencyMap);
 
         System.out.println("All keys printed");
-        for(Map.Entry<String, Integer> entry: map.entrySet()) {
+        for(Map.Entry<String, Integer> entry: frequencyMap.entrySet()) {
             System.out.println(entry.getKey());
         }
 
         System.out.println("All Values Printed");
-        for (Map.Entry<String, Integer> entry: map.entrySet()) {
+        for (Map.Entry<String, Integer> entry: frequencyMap.entrySet()) {
             System.out.println(entry.getValue());
         }
     }
@@ -88,12 +88,13 @@ public class MapFunctionsDefined {
 
         // valueGoingToAssociateToCheetah will be the value of Map after adding new key
         // could be use to serial number the last key getting added
-        map.computeIfAbsent("parrot", valueGoingToAssociateToCheetah -> {
+        map.computeIfAbsent("cheetah", valueGoingToAssociateToCheetah -> {
             System.out.println("valueGoingToAssociateToCheetah");
             System.out.println(valueGoingToAssociateToCheetah);
             System.out.println("valueGoingToAssociateToCheetah");
 
 //            return k.length();
+            System.out.println("valueGoingToAssociateToCheetah.length()");
             return valueGoingToAssociateToCheetah.length();
         });
         System.out.println("Map after computeIfAbsent ");
@@ -161,7 +162,7 @@ public class MapFunctionsDefined {
         System.out.println(map);
         System.out.println("merging cat now if not present");
 
-        map.merge("cat", 110, (oldValue, newValue) -> oldValue + newValue);
+        map.merge("cat", 110, Integer::sum);
         System.out.println(map);
 
         System.out.println("merging lion now");
