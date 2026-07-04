@@ -17,17 +17,17 @@ public class Codility_RotateArray_Right {
 
 */
     public static void main(String[] args) {
-        int stepsToRotate = 3;
+        int stepsToRotate = 1;
         int[] arr =  {3, 8, 9, 7, 6};
         System.out.println(Codility_RotateArray_Right.rotateRight(arr, stepsToRotate));
     }
 
     private static String rotateRight(int[] arr, int stepsToRotate) {
-        int n = arr.length;
-        stepsToRotate %=n;
-        reverse(arr, 0, n-1);
-        reverse(arr, 0, stepsToRotate-1);
-        reverse(arr, stepsToRotate, n-1);
+        int length = arr.length;
+        stepsToRotate %= length;
+        reverse(arr, 0, length - 1);
+        reverse(arr, 0, stepsToRotate - 1);
+        reverse(arr, stepsToRotate, length - 1);
         return Arrays.toString(arr);
     }
 
