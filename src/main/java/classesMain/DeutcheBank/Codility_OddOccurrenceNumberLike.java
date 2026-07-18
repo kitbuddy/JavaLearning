@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Codility_OddOccurrenceNumberLike {
     public static void main(String[] args) {
-        int[] A =  {9, 3, 9, 3, 9, 7, 9 };
+        int[] A =  {9, 3, 9, 3, 9, 9};
 //        System.out.println(OddOccurrenceNumber.getSingleValueFastUsingMap(A));
         System.out.println(Codility_OddOccurrenceNumberLike.getSingleValueFastUsingXOR(A));
     }
