@@ -30,3 +30,30 @@ public class Longest_Balanced_Substring {
         return counter;
     }
 }
+
+
+
+public static int findTheLongestBalancedSubstring(String s) {
+    int zeros = 0;
+    int ones = 0;
+    int maxLength = 0;
+
+    for (int i = 0; i < s.length(); i++) {
+        if (s.charAt(i) == '0') {
+            if (ones > 0) {
+                zeros = 0;
+                ones = 0;
+            }
+            zeros++;
+        } else if (zeros > 0) {
+            ones++;
+            maxLength = Math.max(
+                maxLength,
+                2 * Math.min(zeros, ones)
+            );
+        }
+    }
+
+    return maxLength;
+}
+
